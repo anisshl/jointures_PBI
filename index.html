@@ -36,6 +36,11 @@
                 page-break-before: always;
             }
         }
+
+        .key-column {
+            background-color: #ffcccb;
+            /* Couleur pour la colonne clé */
+        }
     </style>
 </head>
 
@@ -57,24 +62,24 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Nom</th>
                                 <th>Département</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td class="key-column">1</td>
                                 <td>Alice</td>
                                 <td>RH</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>Bob</td>
                                 <td>IT</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>Carol</td>
                                 <td>Marketing</td>
                             </tr>
@@ -87,21 +92,21 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Salaire</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>50000</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>55000</td>
                             </tr>
                             <tr>
-                                <td>4</td>
+                                <td class="key-column">4</td>
                                 <td>45000</td>
                             </tr>
                         </tbody>
@@ -113,7 +118,7 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Nom</th>
                                 <th>Département</th>
                                 <th>Salaire</th>
@@ -121,13 +126,13 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>Bob</td>
                                 <td>IT</td>
                                 <td>50000</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>Carol</td>
                                 <td>Marketing</td>
                                 <td>55000</td>
@@ -151,24 +156,24 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Nom</th>
                                 <th>Département</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td class="key-column">1</td>
                                 <td>Alice</td>
                                 <td>RH</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>Bob</td>
                                 <td>IT</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>Carol</td>
                                 <td>Marketing</td>
                             </tr>
@@ -181,21 +186,21 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Salaire</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>50000</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>55000</td>
                             </tr>
                             <tr>
-                                <td>4</td>
+                                <td class="key-column">4</td>
                                 <td>45000</td>
                             </tr>
                         </tbody>
@@ -207,7 +212,7 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Nom</th>
                                 <th>Département</th>
                                 <th>Salaire</th>
@@ -215,19 +220,20 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td class="key-column">1</td>
                                 <td>Alice</td>
                                 <td>RH</td>
-                                <td>NULL</td>
+                                <td class="text-danger">NULL &#10060;</td>
+                                <!-- Ajout d'une icône pour indiquer l'absence de correspondance -->
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>Bob</td>
                                 <td>IT</td>
                                 <td>50000</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>Carol</td>
                                 <td>Marketing</td>
                                 <td>55000</td>
@@ -251,24 +257,24 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Nom</th>
                                 <th>Département</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td class="key-column">1</td>
                                 <td>Alice</td>
                                 <td>RH</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>Bob</td>
                                 <td>IT</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>Carol</td>
                                 <td>Marketing</td>
                             </tr>
@@ -281,21 +287,21 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Salaire</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>50000</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>55000</td>
                             </tr>
                             <tr>
-                                <td>4</td>
+                                <td class="key-column">4</td>
                                 <td>45000</td>
                             </tr>
                         </tbody>
@@ -307,7 +313,7 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Nom</th>
                                 <th>Département</th>
                                 <th>Salaire</th>
@@ -327,9 +333,9 @@
                                 <td>55000</td>
                             </tr>
                             <tr>
-                                <td>4</td>
-                                <td>NULL</td>
-                                <td>NULL</td>
+                                <td class="key-column">4</td>
+                                <td class="text-danger">NULL &#10060;</td>
+                                <td class="text-danger">NULL &#10060;</td>
                                 <td>45000</td>
                             </tr>
                         </tbody>
@@ -350,24 +356,24 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Nom</th>
                                 <th>Département</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td class="key-column">1</td>
                                 <td>Alice</td>
                                 <td>RH</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>Bob</td>
                                 <td>IT</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>Carol</td>
                                 <td>Marketing</td>
                             </tr>
@@ -380,21 +386,21 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Salaire</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>50000</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>55000</td>
                             </tr>
                             <tr>
-                                <td>4</td>
+                                <td class="key-column">4</td>
                                 <td>45000</td>
                             </tr>
                         </tbody>
@@ -406,7 +412,7 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Nom</th>
                                 <th>Département</th>
                                 <th>Salaire</th>
@@ -414,27 +420,27 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td class="key-column">1</td>
                                 <td>Alice</td>
                                 <td>RH</td>
-                                <td>NULL</td>
+                                <td class="text-danger">NULL &#10060;</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td class="key-column">2</td>
                                 <td>Bob</td>
                                 <td>IT</td>
                                 <td>50000</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="key-column">3</td>
                                 <td>Carol</td>
                                 <td>Marketing</td>
                                 <td>55000</td>
                             </tr>
                             <tr>
-                                <td>NULL</td>
-                                <td>NULL</td>
-                                <td>NULL</td>
+                                <td class="text-danger">NULL &#10060;</td>
+                                <td class="text-danger">NULL &#10060;</td>
+                                <td class="text-danger">NULL &#10060;</td>
                                 <td>45000</td>
                             </tr>
                         </tbody>
@@ -455,24 +461,24 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Nom</th>
                                 <th>Département</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td class="key-column">1</td>
                                 <td>Alice</td>
                                 <td>RH</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>Bob</td>
                                 <td>IT</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>Carol</td>
                                 <td>Marketing</td>
                             </tr>
@@ -485,21 +491,21 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Salaire</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>50000</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>55000</td>
                             </tr>
                             <tr>
-                                <td>4</td>
+                                <td class="key-column">4</td>
                                 <td>45000</td>
                             </tr>
                         </tbody>
@@ -511,7 +517,7 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Nom</th>
                                 <th>Département</th>
                                 <th>Salaire</th> <!-- Ajout de la colonne Salaire -->
@@ -519,10 +525,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td class="key-column">1</td>
                                 <td>Alice</td>
                                 <td>RH</td>
-                                <td>NULL</td> <!-- Ajout de la valeur NULL pour Salaire -->
+                                <td class="text-danger">NULL &#10060;</td> <!-- Ajout de la valeur NULL pour Salaire -->
                             </tr>
                         </tbody>
                     </table>
@@ -542,24 +548,24 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Nom</th>
                                 <th>Département</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td class="key-column">1</td>
                                 <td>Alice</td>
                                 <td>RH</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>Bob</td>
                                 <td>IT</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>Carol</td>
                                 <td>Marketing</td>
                             </tr>
@@ -572,21 +578,21 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Salaire</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>2</td>
+                                <td class="table-success">2</td>
                                 <td>50000</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td class="table-success">3</td>
                                 <td>55000</td>
                             </tr>
                             <tr>
-                                <td>4</td>
+                                <td class="key-column">4</td>
                                 <td>45000</td>
                             </tr>
                         </tbody>
@@ -598,7 +604,7 @@
                     <table class="table table-striped rounded">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID</th>
+                                <th class="key-column">ID</th>
                                 <th>Nom</th> <!-- Ajout de la colonne Nom -->
                                 <th>Département</th> <!-- Ajout de la colonne Département -->
                                 <th>Salaire</th>
@@ -606,9 +612,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>4</td>
-                                <td>NULL</td> <!-- Ajout de la valeur NULL pour Nom -->
-                                <td>NULL</td> <!-- Ajout de la valeur NULL pour Département -->
+                                <td class="key-column">4</td>
+                                <td class="text-danger">NULL &#10060;</td> <!-- Ajout de la valeur NULL pour Nom -->
+                                <td class="text-danger">NULL &#10060;</td> <!-- Ajout de la valeur NULL pour Département -->
                                 <td>45000</td>
                             </tr>
                         </tbody>
