@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Explicative des Types de Jointures dans Power BI</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            padding-top: 20px;
+        }
+
+        .table {
+            margin-top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .type-jointure {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media print {
+            .type-jointure:not(:first-of-type) {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div class="container bg-white rounded shadow-sm p-4 ">
+
+        <h1 class="text-center">Fiche Explicative des Types de Jointures dans Power BI</h1><br>
+
+        <!-- Jointure Interne (Inner Join) -->
+        <section class="type-jointure">
+            <h2 class="text-center">1. Jointure Interne (Inner Join)</h2>
+            <p class="lead"><strong>Explication</strong> : Retourne les lignes qui ont une correspondance dans les deux
+                tables.</p>
+            <div class="container d-flex flex-wrap justify-content-around">
+                <!-- Table Employés (Table A) -->
+                <div class="m-2">
+                    <h3>Table Employés (Table A)</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Département</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alice</td>
+                                <td>RH</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>IT</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Carol</td>
+                                <td>Marketing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Table Salaires (Table B) -->
+                <div class="m-2">
+                    <h3>Table Salaires (Table B)</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Salaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>50000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>55000</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>45000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Résultat de la Jointure Interne -->
+                <div class="m-2">
+                    <h3>Résultat de la Jointure Interne</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Département</th>
+                                <th>Salaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>IT</td>
+                                <td>50000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Carol</td>
+                                <td>Marketing</td>
+                                <td>55000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jointure Externe Gauche (Left Outer Join) -->
+        <section class="type-jointure">
+            <h2 class="text-center">2. Jointure Externe Gauche (Left Outer Join)</h2>
+            <p class="lead"><strong>Explication</strong> : Retourne toutes les lignes de la table de gauche (Table
+                Employés) et les correspondances de la table de droite (Table Salaires). Si aucune correspondance, les
+                colonnes de la table de droite auront des valeurs NULL.</p>
+            <div class="container d-flex flex-wrap justify-content-around">
+                <!-- Table Employés (Table A) -->
+                <div class="m-2">
+                    <h3>Table Employés (Table A)</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Département</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alice</td>
+                                <td>RH</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>IT</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Carol</td>
+                                <td>Marketing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Table Salaires (Table B) -->
+                <div class="m-2">
+                    <h3>Table Salaires (Table B)</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Salaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>50000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>55000</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>45000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Résultat de la Jointure Externe Gauche -->
+                <div class="m-2">
+                    <h3>Résultat de la Jointure Externe Gauche</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Département</th>
+                                <th>Salaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alice</td>
+                                <td>RH</td>
+                                <td>NULL</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>IT</td>
+                                <td>50000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Carol</td>
+                                <td>Marketing</td>
+                                <td>55000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jointure Externe Droite (Right Outer Join) -->
+        <section class="type-jointure">
+            <h2 class="text-center">3. Jointure Externe Droite (Right Outer Join)</h2>
+            <p class="lead"><strong>Explication</strong> : Retourne toutes les lignes de la table de droite (Table
+                Salaires) et les correspondances de la table de gauche (Table Employés). Si aucune correspondance, les
+                colonnes de la table de gauche auront des valeurs NULL.</p>
+            <div class="container d-flex flex-wrap justify-content-around">
+                <!-- Table Employés (Table A) -->
+                <div class="m-2">
+                    <h3>Table Employés (Table A)</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Département</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alice</td>
+                                <td>RH</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>IT</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Carol</td>
+                                <td>Marketing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Table Salaires (Table B) -->
+                <div class="m-2">
+                    <h3>Table Salaires (Table B)</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Salaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>50000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>55000</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>45000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Résultat de la Jointure Externe Droite -->
+                <div class="m-2">
+                    <h3>Résultat de la Jointure Externe Droite</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Département</th>
+                                <th>Salaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>IT</td>
+                                <td>50000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Carol</td>
+                                <td>Marketing</td>
+                                <td>55000</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>NULL</td>
+                                <td>NULL</td>
+                                <td>45000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jointure Externe Complète / Entière (Full Outer Join) -->
+        <section class="type-jointure">
+            <h2 class="text-center">4. Jointure Externe Complète (Full Outer Join)</h2>
+            <p class="lead"><strong>Explication</strong> : Retourne toutes les lignes des deux tables (Table Employés et
+                Table Salaires). Si aucune correspondance, les colonnes correspondantes auront des valeurs NULL.</p>
+            <div class="container d-flex flex-wrap justify-content-around">
+                <!-- Table Employés (Table A) -->
+                <div class="m-2">
+                    <h3>Table Employés (Table A)</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Département</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alice</td>
+                                <td>RH</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>IT</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Carol</td>
+                                <td>Marketing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Table Salaires (Table B) -->
+                <div class="m-2">
+                    <h3>Table Salaires (Table B)</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Salaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>50000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>55000</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>45000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Jointure Externe Complète / Entière -->
+                <div class="m-2">
+                    <h3>Jointure Externe Complète / Entière</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Département</th>
+                                <th>Salaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alice</td>
+                                <td>RH</td>
+                                <td>NULL</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>IT</td>
+                                <td>50000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Carol</td>
+                                <td>Marketing</td>
+                                <td>55000</td>
+                            </tr>
+                            <tr>
+                                <td>NULL</td>
+                                <td>NULL</td>
+                                <td>NULL</td>
+                                <td>45000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jointure Anti-Gauche (Left Anti Join) -->
+        <section class="type-jointure">
+            <h2 class="text-center">5. Jointure Anti-Gauche (Left Anti Join)</h2>
+            <p class="lead"><strong>Explication</strong> : Retourne toutes les lignes de la table de gauche (Table
+                Employés) qui n'ont pas de correspondance dans la table de droite (Table Salaires).</p>
+            <div class="container d-flex flex-wrap justify-content-around">
+                <!-- Table Employés (Table A) -->
+                <div class="m-2">
+                    <h3>Table Employés (Table A)</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Département</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alice</td>
+                                <td>RH</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>IT</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Carol</td>
+                                <td>Marketing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Table Salaires (Table B) -->
+                <div class="m-2">
+                    <h3>Table Salaires (Table B)</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Salaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>50000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>55000</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>45000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Résultat de la Jointure Anti-Gauche  -->
+                <div class="m-2">
+                    <h3>Résultat de la Jointure Anti-Gauche</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Département</th>
+                                <th>Salaire</th> <!-- Ajout de la colonne Salaire -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alice</td>
+                                <td>RH</td>
+                                <td>NULL</td> <!-- Ajout de la valeur NULL pour Salaire -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!--  Jointure Anti-Droite (Right Anti Join) -->
+        <section class="type-jointure">
+            <h2 class="text-center">6. Jointure Anti-Droite (Right Anti Join)</h2>
+            <p class="lead"><strong>Explication</strong> : Retourne toutes les lignes de la table de droite (Table
+                Salaires) qui n'ont pas de correspondance dans la table de gauche (Table Employés).</p>
+            <div class="container d-flex flex-wrap justify-content-around">
+                <!-- Table Employés (Table A) -->
+                <div class="m-2">
+                    <h3>Table Employés (Table A)</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Département</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alice</td>
+                                <td>RH</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>IT</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Carol</td>
+                                <td>Marketing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Table Salaires (Table B) -->
+                <div class="m-2">
+                    <h3>Table Salaires (Table B)</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Salaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>50000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>55000</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>45000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Résultat de la Jointure Anti-Droite -->
+                <div class="m-2">
+                    <h3>Résultat de la Jointure Anti-Droite</h3>
+                    <table class="table table-striped rounded">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th> <!-- Ajout de la colonne Nom -->
+                                <th>Département</th> <!-- Ajout de la colonne Département -->
+                                <th>Salaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>4</td>
+                                <td>NULL</td> <!-- Ajout de la valeur NULL pour Nom -->
+                                <td>NULL</td> <!-- Ajout de la valeur NULL pour Département -->
+                                <td>45000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="conclusion">
+            <h3>Conclusion</h3>
+            <p>Ces exemples fournissent une vue détaillée des différents types de jointures et de leurs résultats
+                possibles. Ils peuvent être intégrés dans une présentation Power BI pour illustrer l'impact de chaque
+                type de jointure sur les données combinées.</p>
+        </section>
+
+    </div>
+
+    <!-- Bootstrap JS et dépendances (Optionnel) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
